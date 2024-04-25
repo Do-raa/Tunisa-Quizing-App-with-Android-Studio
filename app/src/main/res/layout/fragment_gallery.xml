@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".ui.gallery.GalleryFragment"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#F6F5F5"
+android:padding="16dp"
+app:layout_constraintTop_toTopOf="parent">
+
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/religion_card_view"
+    android:layout_width="178dp"
+    android:layout_height="200dp"
+    android:elevation="6dp"
+    android:radius="16dp"
+    app:cardElevation="4dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/food_card_view"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView2"
+    app:layout_constraintVertical_bias="0.096">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/religion_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8576FF"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/title2"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
+            android:layout_width="130dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="monospace"
+            android:text="Religion"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FC1C1A1A"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/header_image2"
+            android:layout_width="121dp"
+            android:layout_height="84dp"
+            android:layout_marginEnd="28dp"
+            android:src="@drawable/religion"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/food_card_view"
+    android:layout_width="178dp"
+    android:layout_height="200dp"
+    android:elevation="6dp"
+    android:radius="16dp"
+    app:cardElevation="4dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/religion_card_view"
+    app:layout_constraintTop_toBottomOf="@+id/textView2"
+    app:layout_constraintVertical_bias="0.101">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/food_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8576FF"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/title4"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
+            android:layout_width="130dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="monospace"
+            android:text="Food"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FC1C1A1A"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/header_image4"
+            android:layout_width="121dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/food"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/culture_card_view"
+    android:layout_width="178dp"
+    android:layout_height="200dp"
+    android:elevation="6dp"
+    android:radius="16dp"
+    app:cardElevation="4dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/sight_card_view"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/food_card_view"
+    app:layout_constraintVertical_bias="0.239">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/culture_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8576FF"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/title1"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
+            android:layout_width="130dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="monospace"
+            android:text="Music"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FC1C1A1A"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/header_image1"
+            android:layout_width="122dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="28dp"
+            android:src="@drawable/music"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.324" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/sight_card_view"
+    android:layout_width="178dp"
+    android:layout_height="200dp"
+    android:elevation="6dp"
+    android:radius="16dp"
+    app:cardElevation="4dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/culture_card_view"
+    app:layout_constraintTop_toBottomOf="@+id/food_card_view"
+    app:layout_constraintVertical_bias="0.23">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sight_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8576FF"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/title3"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
+            android:layout_width="130dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="monospace"
+            android:text="Sightseeing"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FC1C1A1A"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.916" />
+
+        <ImageView
+            android:id="@+id/header_image3"
+            android:layout_width="121dp"
+            android:layout_height="84dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/seightseeing"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.234" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="174dp"
+    android:layout_marginTop="101dp"
+    android:layout_marginEnd="194dp"
+    android:width="200dp"
+    android:height="70dp"
+    android:fontFamily="serif"
+    android:text="Quiz"
+    android:textAlignment="center"
+    android:textColor="#665BBF"
+    android:textSize="48sp"
+    android:textStyle="bold|italic"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.449"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
