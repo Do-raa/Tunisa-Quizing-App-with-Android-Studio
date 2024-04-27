@@ -132,33 +132,21 @@ public class MusicActivity extends AppCompatActivity {
 
 
     private void displayQuestion() {
-        if (currentQuestionIndex <= 0) {
-            currentQuestion = questionList.get(currentQuestionIndex);
-            textViewQuestion.setText(currentQuestion.getQuestion());
-            radioButtonOption1.setText(currentQuestion.getOptions()[0]);
-            radioButtonOption2.setText(currentQuestion.getOptions()[1]);
-            radioButtonOption3.setText(currentQuestion.getOptions()[2]);
-            radioButtonOption4.setText(currentQuestion.getOptions()[3]);
+        currentQuestion = questionList.get(currentQuestionIndex);
+        textViewQuestion.setText(currentQuestion.getQuestion());
+        String[] options = currentQuestion.getOptions();
+        radioButtonOption1.setText(options[0]);
+        radioButtonOption2.setText(options[1]);
+        radioButtonOption3.setText(options[2]);
+        radioButtonOption4.setText(options[3]);
 
-            // Disable previous button
-            buttonPrevious.setEnabled(false);
-            // Update the counterView
-            counterView.setText((currentQuestionIndex + 1) + "/7");
-        } else if(currentQuestionIndex > 0 && currentQuestionIndex < questionList.size()) {
-            currentQuestion = questionList.get(currentQuestionIndex);
-            textViewQuestion.setText(currentQuestion.getQuestion());
-            radioButtonOption1.setText(currentQuestion.getOptions()[0]);
-            radioButtonOption2.setText(currentQuestion.getOptions()[1]);
-            radioButtonOption3.setText(currentQuestion.getOptions()[2]);
-            radioButtonOption4.setText(currentQuestion.getOptions()[3]);
+        // Update the counterView
+        counterView.setText((currentQuestionIndex + 1) + "/7");
 
-            buttonPrevious.setEnabled(true);
-            counterView.setText((currentQuestionIndex + 1) + "/7");
-        } else if ( currentQuestionIndex >= questionList.size() -1){
-                buttonNext.setEnabled(false);
-                Toast.makeText(this, "No more questions", Toast.LENGTH_SHORT).show();
-            }
-    };
+        // Enable or disable previous and next buttons based on the current question index
+        buttonPrevious.setEnabled(currentQuestionIndex > 0);
+        buttonNext.setEnabled(currentQuestionIndex < questionList.size() - 1);
+    }
 
     private void checkNextAnswer() {
         int selectedOption = getSelectedOption();

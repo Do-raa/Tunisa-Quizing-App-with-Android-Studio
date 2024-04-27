@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -16,11 +17,14 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.ActivityNavigator;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import com.example.quizingapp.R;
 import com.example.quizingapp.databinding.FragmentHomeBinding;
 import com.example.quizingapp.ui.gallery.GalleryFragment;
 import com.example.quizingapp.ui.slideshow.SlideshowFragment;
+import com.google.android.material.navigation.NavigationView;
 
 public class HomeFragment extends Fragment {
 
@@ -39,7 +43,9 @@ public class HomeFragment extends Fragment {
         startQuizButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.nav_gallery);
+                // Navigate to GalleryFragment
+                NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_content_main);
+                navController.navigate(R.id.nav_gallery);
             }
         });
 
@@ -48,7 +54,9 @@ public class HomeFragment extends Fragment {
         learnMoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.nav_slideshow);
+                // Navigate to SlideshowFragment
+                NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_content_main);
+                navController.navigate(R.id.nav_slideshow);
             }
         });
 

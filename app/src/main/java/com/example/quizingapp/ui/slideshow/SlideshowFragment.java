@@ -60,7 +60,7 @@ public class SlideshowFragment extends Fragment {
         buttonStartQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.nav_gallery);
+                Navigation.findNavController(v).navigate(R.id.action_from_slideshow_to_gallery);
             }
         });
 

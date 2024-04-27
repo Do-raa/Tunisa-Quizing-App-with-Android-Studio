@@ -9,7 +9,14 @@
         android:id="@+id/nav_home"
         android:name="com.example.quizingapp.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+    <action
+        android:id="@+id/action_from_home_to_gallery"
+        app:destination="@id/nav_gallery" />
+    <action
+        android:id="@+id/action_from_home_to_slideshow"
+        app:destination="@id/nav_slideshow" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -21,5 +28,9 @@
         android:id="@+id/nav_slideshow"
         android:name="com.example.quizingapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_slideshow" >
+    <action
+        android:id="@+id/action_from_slideshow_to_gallery"
+        app:destination="@id/nav_gallery" />
+    </fragment>
 </navigation>

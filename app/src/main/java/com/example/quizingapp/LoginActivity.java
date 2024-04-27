@@ -37,11 +37,11 @@ public class LoginActivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(v -> loginUser());
     }
 
-    private boolean isValidEmail(String email) {
+    public boolean isValidEmail(String email) {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
-    private boolean isValidPassword(String password) {
+    public boolean isValidPassword(String password) {
         // Password must be at least 8 characters, contain a lowercase letter, an uppercase letter, and a digit
         String passwordPattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$";
         return password.matches(passwordPattern);
